@@ -1,3 +1,4 @@
+//Creamos la clase Plato abstracta, ya que contentra métodos que van a ser sobreescritos por otras clases
 public abstract class Plato {
     private String nombre;
     private double precio;
@@ -24,5 +25,6 @@ public abstract class Plato {
 
     }
 
+    //Este será el método que sobreescribiremos
     public abstract double calcularPrecio();
 }

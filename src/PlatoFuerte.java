@@ -1,6 +1,9 @@
+//Esta es la clase PlatoFuerte que extiende de plato y agrega una variable llamada recargo
 public class PlatoFuerte extends Plato {
     private double recargo;
 
+
+    //Creamos el constructor de platofuerte usando el costructor de plato y agregando recargo
     public PlatoFuerte(String nombre, double precio, double recargo) {
         super(nombre, precio);
         this.recargo = recargo;
@@ -14,6 +17,7 @@ public class PlatoFuerte extends Plato {
         this.recargo = recargo;
     }
 
+    //Aquí hacemos un override a calcularPrecio añadiendo el recargo
     @Override
     public double calcularPrecio() {
         return getPrecio() + getRecargo();

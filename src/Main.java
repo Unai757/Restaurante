@@ -3,15 +3,14 @@
 public class Main {
     public static void main(String[] args) {
         Pedido miPedido = new Pedido(5);
-        Postre postre = new Postre("prueba", 10);
+        Postre postre = new Postre("chocolate", 7);
         Entrada entrada = new Entrada("sopa", 5);
         PlatoFuerte platoFuerte = new PlatoFuerte("Carne", 12, 10);
-        Postre postre2 = new Postre("pedido con descuento", 123,20);
-        Postre postre3 = new Postre("prueba", 10);
-        Entrada entrada2 = new Entrada("sopa", 5);
-        PlatoFuerte platoFuerte2 = new PlatoFuerte("Carne", 12, 10);
-        Postre postre4 = new Postre("pedido con descuento", 123,20);
+        Postre postre2 = new Postre("tarta", 123, 20);
+        Postre postre3 = new Postre("helado", 10);
 
+
+//Llamo a los métodos de cada objeto que hemos creado, calculando su precio, agregándolos al array
         postre.calcularPrecio();
         entrada.calcularPrecio();
         platoFuerte.calcularPrecio();
@@ -21,8 +20,6 @@ public class Main {
         miPedido.agregarplatos(platoFuerte);
         miPedido.agregarplatos(postre2);
         miPedido.agregarplatos(postre3);
-        miPedido.agregarplatos(entrada2);
-        miPedido.agregarplatos(platoFuerte2);
 
         miPedido.recorrerplatos();
 
