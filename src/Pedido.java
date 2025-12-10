@@ -7,6 +7,9 @@ public class Pedido {
 
     Plato[] listaplatos;
 
+    //Esto lo usamos para crear un costructor creando que el array de platos tendra la capacidad que le digamos
+    // y diciendo que lista platos es ahora el array de Plato
+    // y empezando el contador en 0
     public Pedido(int capacidad) {
         this.listaplatos = new Plato[capacidad];
         this.contador = 0;
@@ -19,7 +22,8 @@ public class Pedido {
          *los disponibles que hay en el array
          */
         try {
-
+//Aquí añadimos los platos haciendo que agreguemos platos en la posición que queramos,
+// cuando agregamos el plato pasamos a la siguiente posición
             listaplatos[contador] = platoParaAgregar;
             contador++;
             System.out.println("Plato añadido con éxito");

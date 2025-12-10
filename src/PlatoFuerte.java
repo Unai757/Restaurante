@@ -20,6 +20,10 @@ public class PlatoFuerte extends Plato {
     //Aquí hacemos un override a calcularPrecio añadiendo el recargo
     @Override
     public double calcularPrecio() {
-        return getPrecio() + getRecargo();
+        if (getPrecio() < 0) {
+            throw new NumeroInvalidoException("El plato no puede tener un precio negativo");
+        }else {
+            return getPrecio() + getRecargo();
+        }
     }
 }

@@ -17,11 +17,17 @@ public abstract class Plato {
     }
 
     public double getPrecio() {
-        return precio;
-    }
+        //Aquí comprobamos que si el precio es menor que 0 salga el mensaje de nuestra excepcion personalizada
+        if (precio<0){
+             throw new NumeroInvalidoException("El precio no puede ser negativo");
+        }else {
+            return precio;
+        }
 
+    }
     public void setPrecio(double precio) {
         this.precio = precio;
+
 
     }
 

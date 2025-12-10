@@ -31,7 +31,11 @@ public class Postre extends Plato {
 
     //Aquí creamos un método que calculara el precio si tiene descuento si no mostrara el precio normal
     public double calcularPrecio(double descuento) {
-        double preciocondescuento = getPrecio() * (descuento / 100);
-        return getPrecio() - preciocondescuento;
+        /*if (getPrecio() < 0) {
+            throw new NumeroInvalidoException("El plato no puede tener un precio negativo");
+        } else {*/
+
+            double preciocondescuento = getPrecio() * (descuento / 100);
+            return getPrecio() - preciocondescuento;
+        }
     }
-}
