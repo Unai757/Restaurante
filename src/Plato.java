@@ -6,6 +6,9 @@ public abstract class Plato {
     public Plato(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
+        if (precio<0) {
+            throw new NumeroInvalidoException("El precio no puede ser negativo");
+        }
     }
 
     public String getNombre() {
@@ -18,11 +21,9 @@ public abstract class Plato {
 
     public double getPrecio() {
         //Aquí comprobamos que si el precio es menor que 0 salga el mensaje de nuestra excepcion personalizada
-        if (precio<0){
-             throw new NumeroInvalidoException("El precio no puede ser negativo");
-        }else {
+
             return precio;
-        }
+
 
     }
     public void setPrecio(double precio) {

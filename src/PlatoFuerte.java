@@ -13,7 +13,7 @@ public class PlatoFuerte extends Plato {
         return recargo;
     }
 
-    public void setRecargo(int recargo) {
+    public void setRecargo(double recargo) {
         this.recargo = recargo;
     }
 
