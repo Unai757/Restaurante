@@ -9,8 +9,7 @@ public class Entrada extends Plato {
     public double calcularPrecio() {
         /*
             if (getPrecio() < 0) {
-            hrow new NumeroInvalidoException("El plato no puede tener un precio negativo");
-             } else {
+            throw new NumeroInvalidoException("El plato no puede tener un precio negativo");} else {
             */
         return getPrecio();
         }
